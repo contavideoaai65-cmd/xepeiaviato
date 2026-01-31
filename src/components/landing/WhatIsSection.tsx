@@ -1,7 +1,7 @@
 import { MessageCircle, Target, Clock, Wallet, Zap } from "lucide-react";
 import aviatorPlane from "@/assets/aviator-plane.png";
 
-const GROUP_NAME = "{{NOME_DO_GRUPO}}";
+const GROUP_NAME = "Xepei Aviator";
 
 const features = [
   {

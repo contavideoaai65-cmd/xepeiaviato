@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Send, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const TELEGRAM_LINK = "{{LINK_TELEGRAM}}";
-const GROUP_NAME = "{{NOME_DO_GRUPO}}";
+const TELEGRAM_LINK = "https://t.me/+mGgBORBw7qEwZjBh";
+const GROUP_NAME = "Xepei Aviator";
 
 const HeroSection = () => {
   return (

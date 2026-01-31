@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Send, Sparkles, ArrowRight } from "lucide-react";
 import aviatorPlane from "@/assets/aviator-plane.png";
 
-const TELEGRAM_LINK = "{{LINK_TELEGRAM}}";
+const TELEGRAM_LINK = "https://t.me/+mGgBORBw7qEwZjBh";
 
 const FinalCTASection = () => {
   return (
