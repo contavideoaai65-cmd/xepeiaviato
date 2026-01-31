@@ -1,7 +1,6 @@
-import { Star, Quote } from "lucide-react";
-
-const PRINTS_PLACEHOLDER = "{{PRINTS_RESULTADOS}}";
-const TESTIMONIALS_PLACEHOLDER = "{{DEPOIMENTOS}}";
+import { Star, Quote, CheckCircle, TrendingUp } from "lucide-react";
+import resultadoSinais from "@/assets/resultado-sinais.png";
+import resultadoCorrecao from "@/assets/resultado-correcao.png";
 
 // Placeholder testimonials - replace with real ones
 const testimonials = [
@@ -37,21 +36,60 @@ const SocialProofSection = () => {
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             Estratégia e disciplina fazem toda a diferença.
             <br />
-            Veja o que nossos membros estão dizendo.
+            Veja os resultados do nosso grupo.
           </p>
         </div>
 
-        {/* Results Prints Placeholder */}
+        {/* Results Prints - Real Screenshots */}
         <div className="mb-16">
-          <div className="bg-gradient-card border border-border/50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="text-center text-muted-foreground">
-              <div className="w-16 h-16 bg-muted rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-aviator-gold" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Sinais Card */}
+            <div className="bg-gradient-card border border-border/50 rounded-2xl p-4 overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-fire">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 bg-aviator-green/20 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-aviator-green" />
+                </div>
+                <span className="text-foreground font-semibold text-sm">Lista de Sinais</span>
               </div>
-              <p className="text-sm mb-2">Área para prints de resultados</p>
-              <code className="text-xs bg-muted px-2 py-1 rounded">
-                {PRINTS_PLACEHOLDER}
-              </code>
+              <div className="rounded-xl overflow-hidden border border-border/30">
+                <img 
+                  src={resultadoSinais} 
+                  alt="Lista de sinais Aviator - Xepei Aviator" 
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+            </div>
+
+            {/* Correção/Resultados Card */}
+            <div className="bg-gradient-card border border-border/50 rounded-2xl p-4 overflow-hidden group hover:border-accent/50 transition-all duration-300 hover:shadow-cta">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 bg-aviator-green/20 rounded-lg flex items-center justify-center">
+                  <CheckCircle className="w-4 h-4 text-aviator-green" />
+                </div>
+                <span className="text-foreground font-semibold text-sm">Relatório de Correção</span>
+                <span className="ml-auto bg-aviator-green/20 text-aviator-green text-xs font-bold px-2 py-1 rounded-full">
+                  100% ✓
+                </span>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-border/30">
+                <img 
+                  src={resultadoCorrecao} 
+                  alt="Relatório de correção Aviator - 100% de acerto" 
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Stats highlight */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
+            <div className="flex items-center gap-2 bg-aviator-green/10 border border-aviator-green/30 rounded-full px-4 py-2">
+              <CheckCircle className="w-5 h-5 text-aviator-green" />
+              <span className="text-foreground font-bold">10 Vitórias</span>
+            </div>
+            <div className="flex items-center gap-2 bg-aviator-green/10 border border-aviator-green/30 rounded-full px-4 py-2">
+              <TrendingUp className="w-5 h-5 text-aviator-green" />
+              <span className="text-foreground font-bold">100% de Aproveitamento</span>
             </div>
           </div>
         </div>
@@ -94,13 +132,6 @@ const SocialProofSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Testimonials Placeholder */}
-        <div className="mt-8 text-center">
-          <code className="text-xs text-muted-foreground bg-muted px-3 py-1.5 rounded">
-            {TESTIMONIALS_PLACEHOLDER}
-          </code>
         </div>
       </div>
     </section>
