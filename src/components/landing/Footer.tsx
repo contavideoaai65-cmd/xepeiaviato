@@ -1,4 +1,4 @@
-const BRAND_PLACEHOLDER = "{{MARCA_LOGO}}";
+import xepeiLogo from "@/assets/xepei-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,12 +7,17 @@ const Footer = () => {
     <footer className="py-8 bg-aviator-darker border-t border-border/20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="text-center">
-            <code className="text-xs text-muted-foreground bg-muted/30 px-2 py-1 rounded">
-              {BRAND_PLACEHOLDER}
-            </code>
+            <img 
+              src={xepeiLogo} 
+              alt="Xepei Aviator" 
+              className="w-20 h-20 rounded-full object-cover mx-auto shadow-fire"
+            />
           </div>
+
+          {/* Brand name */}
+          <p className="text-foreground font-bold text-lg">Xepei Aviator</p>
 
           {/* Copyright */}
           <p className="text-muted-foreground text-xs text-center">
