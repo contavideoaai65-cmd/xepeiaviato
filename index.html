@@ -35,7 +35,7 @@
     </div>
     <div id="root"></div>
     <script>
-      fetch('/public/status.json?t=' + Date.now())
+      fetch('/status.json?t=' + Date.now())
         .then(r => r.json())
         .then(data => {
           if (data.maintenance === true) {
@@ -48,3 +48,4 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
