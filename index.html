@@ -1,18 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xepei Aviator - Vip</title>
-    <meta name="description" content="Entre para o grupo VIP do Aviator e aprenda estratégias, gestão de banca e leitura de padrões. Comunidade exclusiva no Telegram." />
-    <meta name="author" content="Grupo VIP Aviator" />
-    <meta property="og:title" content="Grupo VIP Aviator | Estratégias e Comunidade" />
-    <meta property="og:description" content="Descubra como iniciantes estão aprendendo a jogar Aviator com estratégia, leitura e disciplina." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@GrupoVIPAviator" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="description" content="Entre para o grupo VIP do Aviator" />
     <style id="maintenance-style">
       .maintenance-screen {
         display: none;
@@ -25,27 +17,25 @@
         justify-content: center;
         align-items: center;
       }
-      .maintenance-content {
-        text-align: center;
-        padding: 40px;
-        max-width: 500px;
-      }
+      .maintenance-content { text-align: center; padding: 40px; max-width: 500px; }
       .maintenance-icon { font-size: 80px; margin-bottom: 20px; }
-      .maintenance-title { font-size: 32px; margin-bottom: 15px; color: #e94560; }
-      .maintenance-text { font-size: 18px; opacity: 0.8; line-height: 1.6; }
+      .maintenance-title { font-size: 28px; margin-bottom: 15px; color: #e94560; }
+      .maintenance-text { font-size: 18px; opacity: 0.8; line-height: 1.6; margin-bottom: 20px; }
+      .maintenance-contact { font-size: 16px; color: #4ecdc4; }
     </style>
   </head>
   <body>
     <div class="maintenance-screen" id="maintenance-screen">
       <div class="maintenance-content">
         <div class="maintenance-icon"></div>
-        <h1 class="maintenance-title">Em Manutenção</h1>
-        <p class="maintenance-text">Estamos realizando melhorias no site.<br>Voltaremos em breve!</p>
+        <h1 class="maintenance-title">Site Temporariamente Indisponível</h1>
+        <p class="maintenance-text">Sentimos muito pelo transtorno.<br>Por favor, entre em contato com o suporte.</p>
+        <p class="maintenance-contact"> Suporte Técnico</p>
       </div>
     </div>
     <div id="root"></div>
     <script>
-      fetch('/status.json?t=' + Date.now())
+      fetch('/public/status.json?t=' + Date.now())
         .then(r => r.json())
         .then(data => {
           if (data.maintenance === true) {
@@ -53,7 +43,7 @@
             document.getElementById('root').style.display = 'none';
           }
         })
-        .catch(e => console.log('Status check:', e));
+        .catch(e => console.log('Status:', e));
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
